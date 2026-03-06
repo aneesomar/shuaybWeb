@@ -18,7 +18,7 @@ export default function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 flex-shrink-0">
             <img
-              src="/images/logo.webp"
+              src="favicon.png"
               alt="Shuayb Omar Physiotherapy"
               className="h-10 w-10 object-contain rounded-full"
             />

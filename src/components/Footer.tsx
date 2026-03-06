@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/images/logo.webp"
+                src="favicon.png"
                 alt="Logo"
                 className="h-9 w-9 rounded-full object-contain"
               />
