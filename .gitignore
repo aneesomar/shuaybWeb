@@ -21,3 +21,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Raw/source images - too large for git, use compressed copies in src/assets/
+website physio/
