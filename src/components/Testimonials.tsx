@@ -1,90 +1,86 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Recovery from ACL Surgery",
+    name: "Sandee Jacobs",
+    role: "Knee Rehabilitation",
     content:
-      "After my ACL surgery, I was nervous about my recovery. The team at PhysioFlow provided exceptional care and guidance. I'm back to playing tennis within 6 months!",
+      "Shuayb Omar has been assisting me with rehabilitating my knee injury over the past few weeks. I have seen huge improvements in my strength and mobility, and my pain has reduced significantly since starting treatment. He explains everything clearly, listens to my concerns, and tailors each session to what my knee actually needs. Shuayb is professional, friendly, and genuinely caring. I highly recommend his services!",
     rating: 5,
   },
   {
-    name: "Michael Chen",
-    role: "Chronic Back Pain Relief",
+    name: "Liam Metcalfe",
+    role: "Shoulder Injury",
     content:
-      "Years of back pain that seemed hopeless. The personalized treatment plan and professional guidance transformed my life. Highly recommended!",
+      "Shuayb is a fantastic physio. He helped me work through my shoulder injury. I appreciate his willingness to listen to your feedback and provide you with an understanding of the issue. His rehab plans helped me get back to my best. Would definitely recommend his services.",
     rating: 5,
   },
   {
-    name: "Emma Davis",
-    role: "Post-Pregnancy Rehabilitation",
+    name: "Ma-aveyah Moos",
+    role: "Recurring Back Issues",
     content:
-      "The team's expertise in postpartum recovery was incredible. They helped me regain my strength and confidence. Thank you!",
+      "I use Shuayb often as I have recurring back issues. He is always flexible and finds a way to accommodate me when I am in pain, and usually sorts me out in one session! He also provides advice against future injuries as well as preventative exercises and stretches as maintenance. I would not go anywhere else. I would highly recommend Shuayb for any physio related matters.",
     rating: 5,
   },
   {
-    name: "James Wilson",
-    role: "Shoulder Injury Recovery",
+    name: "Taz Jai",
+    role: "Patient",
     content:
-      "Professional, caring, and results-driven. My shoulder mobility has improved tremendously. Best physiotherapy experience I've had.",
+      "Extremely knowledgeable, professional and skilled, with a genuine interest in patient recovery. Explained everything clearly and helped me recover faster than expected.",
     rating: 5,
   },
   {
-    name: "Lisa Martinez",
-    role: "Stroke Recovery",
+    name: "Simone Williams",
+    role: "Patient",
     content:
-      "The neurological specialists here are outstanding. Their specialized approach helped me recover mobility and regain independence.",
+      "I had a great session at Shuayb Omar Physiotherapy! The care and expertise were exceptional, and I left feeling well-supported and on the right track with my recovery. The room was spacious, accessible, and that made the experience even more comfortable. Highly recommend for professional and attentive care in a welcoming environment.",
     rating: 5,
   },
   {
-    name: "Robert Thompson",
-    role: "Sports Performance Enhancement",
+    name: "Shiraz Hoosen",
+    role: "Lower Back Treatment",
     content:
-      "As an athlete, I needed expert guidance to improve my performance and prevent injuries. They delivered beyond expectations.",
+      "Shuayb managed to adjust my lower back with a few little adjustments where I am able to at least pick things up and stand up without any lower back pain. Great results!",
     rating: 5,
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-white">
+    <section id="testimonials" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Patient Success Stories
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real results from real patients. See how we've helped hundreds achieve their recovery goals.
+          <p className="text-teal-600 font-semibold tracking-widest uppercase text-sm mb-3">Patient Stories</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">What Patients Say</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Real outcomes from real patients: recovery, rehabilitation, and results.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative"
             >
+              <Quote size={28} className="text-teal-100 absolute top-5 right-5" />
+
               <div className="flex gap-1 mb-4">
                 {Array(testimonial.rating)
                   .fill(0)
                   .map((_, i) => (
-                    <Star
-                      key={i}
-                      size={18}
-                      className="fill-yellow-400 text-yellow-400"
-                    />
+                    <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
                   ))}
               </div>
 
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-slate-600 mb-6 leading-relaxed text-sm">
                 "{testimonial.content}"
               </p>
 
-              <div>
-                <p className="font-bold text-gray-900">{testimonial.name}</p>
-                <p className="text-sm text-blue-600 font-semibold">
-                  {testimonial.role}
-                </p>
+              <div className="border-t border-slate-100 pt-4">
+                <p className="font-bold text-slate-800">{testimonial.name}</p>
+                <p className="text-sm text-teal-600 font-medium mt-0.5">{testimonial.role}</p>
               </div>
             </div>
           ))}
