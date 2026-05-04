@@ -1,5 +1,7 @@
 import { Star, Quote } from "lucide-react";
 
+const googleRating = "4.9";
+
 const testimonials = [
   {
     name: "Sandee Jacobs",
@@ -51,11 +53,24 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16">
-          <p className="text-teal-600 font-semibold tracking-widest uppercase text-sm mb-3">Patient Stories</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">What Patients Say</h2>
+          <p className="text-teal-600 font-semibold tracking-widest uppercase text-sm mb-3">Google Reviews</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">What Patients Say</h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Real outcomes from real patients: recovery, rehabilitation, and results.
+            Real Google reviews for Shuayb Omar Physiotherapy (Pty) Ltd.
           </p>
+
+          <div className="mt-8 inline-flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-5 text-center shadow-sm sm:flex-row sm:px-8">
+            <img
+              src="/images/review-google.png"
+              alt="Google Reviews"
+              className="h-12 w-auto object-contain sm:h-14"
+            />
+            <div className="hidden h-12 w-px bg-slate-200 sm:block" />
+            <div className="flex min-w-[116px] flex-col items-center justify-center">
+              <span className="text-4xl font-bold text-slate-900">{googleRating}</span>
+              <p className="mt-1 text-sm font-medium text-slate-500">Overall Google rating</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -66,7 +81,7 @@ export default function Testimonials() {
             >
               <Quote size={28} className="text-teal-100 absolute top-5 right-5" />
 
-              <div className="flex gap-1 mb-4">
+              <div className="mb-5 flex gap-1 pr-8">
                 {Array(testimonial.rating)
                   .fill(0)
                   .map((_, i) => (

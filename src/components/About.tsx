@@ -17,9 +17,9 @@ export default function About() {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-teal-600 font-semibold tracking-widest uppercase text-sm mb-3">About Us</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">
             Meet Shuayb Omar
-          </h2>
+          </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             BSc Physiotherapy graduate from the University of Cape Town, dedicated to helping you move better, feel stronger, and live pain-free.
           </p>

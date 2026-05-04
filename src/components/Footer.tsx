@@ -1,4 +1,5 @@
 import { MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { navigateTo } from "../utils/navigation";
 import { openWhatsApp } from "../utils/whatsapp";
 
 export default function Footer() {
@@ -33,12 +34,20 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm tracking-wide">Quick Links</h4>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Services", href: "#services" },
-                { label: "About Us", href: "#about" },
-                { label: "Contact", href: "#contact" },
+                { label: "Services", href: "/#services" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Testimonials", href: "/testimonials" },
+                { label: "Contact Us", href: "/contact-us" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-teal-400 transition-colors">
+                  <a
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigateTo(link.href);
+                    }}
+                    className="hover:text-teal-400 transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -86,7 +95,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-sm">
           <p className="text-slate-600">&copy; {currentYear} Shuayb Omar Physiotherapy. All rights reserved.</p>
-          <p className="text-slate-600">Room 305, Rondebosch Medical Center, Cape Town</p>
+          <p className="text-slate-600">Room 305, Summit House, Rondebosch Medical Center</p>
         </div>
       </div>
     </footer>

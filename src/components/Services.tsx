@@ -40,7 +40,7 @@ const services = [
       "Designed for individuals with breathing difficulties or lung conditions. Combines breathing exercises, physical activity, and education to improve respiratory function and overall quality of life.",
   },
   {
-    title: "Post-Injury Rehabilitation",
+    title: "Post-Injury and Surgical Rehabilitation",
     image: "/images/rehab-1.webp",
     description:
       "Restores strength, mobility, and function after an injury or surgery. Through personalised exercise programs and guided therapy, we help patients recover safely and return to their activities.",
@@ -97,7 +97,7 @@ export default function Services() {
                 <button
                   onClick={() =>
                     openWhatsApp(
-                      `Hi! I'd like to book an appointment for ${service.title}.`
+                      "Hi! I'd like to make a booking for a physiotherapy appointment."
                     )
                   }
                   className="mt-5 flex items-center gap-1.5 text-teal-600 font-semibold text-sm hover:text-teal-700 transition-colors group/btn"
@@ -131,5 +131,4 @@ export default function Services() {
     </section>
   );
 }
-
 

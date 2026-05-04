@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
+import { ArrowRight, MessageCircle, ChevronDown, MapPin } from "lucide-react";
 import { openWhatsApp } from "../utils/whatsapp";
 
 export default function Hero() {
@@ -17,12 +17,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-teal-600/20 border border-teal-500/30 text-teal-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-8 backdrop-blur-sm">
-            <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-            BSc Physiotherapy, University of Cape Town
-          </div>
-
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
             Move Better.
             <br />
@@ -34,6 +28,11 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-xl">
             Evidence-based physiotherapy tailored to you. From sports injuries and chronic pain to post-surgical rehabilitation and performance recovery.
           </p>
+
+          <div className="mb-10 inline-flex max-w-xl items-start gap-3 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-left text-sm font-medium text-slate-200 backdrop-blur-sm">
+            <MapPin size={18} className="mt-0.5 flex-shrink-0 text-teal-300" />
+            <span>Room 305, Summit House, Rondebosch Medical Center</span>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <button

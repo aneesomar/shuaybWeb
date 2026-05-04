@@ -1,31 +1,37 @@
 import { MessageCircle, Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
+import { navigateTo } from "../utils/navigation";
 import { openWhatsApp } from "../utils/whatsapp";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "Contact Us", href: "/contact-us" },
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-white shadow-sm border-b border-slate-100">
+    <header className="sticky top-0 z-40 border-b border-white/40 bg-white/75 shadow-sm shadow-slate-200/60 backdrop-blur-xl supports-[backdrop-filter]:bg-white/65">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 flex-shrink-0">
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateTo("/");
+            }}
+            className="flex items-center flex-shrink-0"
+            aria-label="Shuayb Omar Physiotherapy home"
+          >
             <img
-              src="favicon.png"
+              src="/logo.png"
               alt="Shuayb Omar Physiotherapy"
-              className="h-10 w-10 object-contain rounded-full"
+              className="h-20 w-auto max-w-[290px] object-contain md:h-24 md:max-w-[390px]"
             />
-            <div className="leading-tight">
-              <p className="text-sm font-bold text-slate-800 tracking-wide">Shuayb Omar</p>
-              <p className="text-xs text-teal-600 font-semibold tracking-widest uppercase">Physiotherapy</p>
-            </div>
           </a>
 
           {/* Desktop nav */}
@@ -34,6 +40,10 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateTo(item.href);
+                }}
                 className="text-slate-600 hover:text-teal-600 transition-colors font-medium text-sm tracking-wide"
               >
                 {item.label}
@@ -71,13 +81,17 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-6 pt-2 space-y-4 border-t border-slate-100 mt-1">
+          <nav className="md:hidden pb-6 pt-2 space-y-4 border-t border-white/50 mt-1">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateTo(item.href);
+                  setIsMenuOpen(false);
+                }}
                 className="block text-slate-700 hover:text-teal-600 font-medium py-1"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>

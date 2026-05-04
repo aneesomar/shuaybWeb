@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omarphysiotherapy.co.za/sitemap.xml

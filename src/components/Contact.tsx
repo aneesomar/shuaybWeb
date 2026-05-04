@@ -21,7 +21,7 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-teal-400 font-semibold tracking-widest uppercase text-sm mb-3">Get In Touch</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">Contact Us</h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">Contact Us</h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Ready to start your recovery journey? Reach out to book an appointment or ask any questions.
           </p>
