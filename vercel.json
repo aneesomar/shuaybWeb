@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/about-us",
+      "destination": "/about-us/index.html"
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/testimonials/index.html"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact-us/index.html"
+    }
+  ]
+}
